@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock School</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f8fa;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 10px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        header nav a:hover {
+            color: #007bff;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .auth-buttons a {
+            padding: 8px 20px;
+            text-decoration: none;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            color: #007bff;
+            font-size: 14px;
+        }
+
+        .auth-buttons a.sign-up {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .categories {
+            margin-top: 40px;
+        }
+
+        .categories h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .category-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+
+        .category-card img {
+            width: 60px;
+            margin-bottom: 10px;
+        }
+
+        .category-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .category-card p {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .category-card .modules {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .category-card .views {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .category-card a {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .category-card a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">LOGO HERE</div>
+    <nav>
+        <a href="#">IPO</a>
+        <a href="#">Community</a>
+        <a href="#">Products</a>
+        <a href="#">Brokers</a>
+        <a href="#">Live News</a>
+    </nav>
+    <div class="auth-buttons">
+        <a href="#">Sign In</a>
+        <a href="#" class="sign-up">Sign Up Now</a>
+    </div>
+</header>
+
+<div class="container">
+    <section class="categories">
+        <h1>Categories</h1>
+        <div class="grid">
+            <!-- Basic Finance -->
+            <div class="category-card">
+                <img src="C://Users//mailt//Desktop//BLUESTOCK//frontend_adishree//basic_finance.png" alt="Basic Finance">
+                <h3>Basic Finance</h3>
+                <p>Learn to manage money, choose investments wisely, and achieve financial goals.</p>
+                <div class="modules">4 Modules</div>
+                <div class="views">560453 views</div>
+                <a href="#">View Details &gt;&gt;</a>
+            </div>
+
+            <!-- Beginners Stock Markets -->
+            <div class="category-card">
+                <img src="C://Users//mailt//Desktop//BLUESTOCK//frontend_adishree//beginners_stocks_markets.png" alt="Beginners Stock Markets">
+                <h3>Beginners Stock Markets</h3>
+                <p>Learn stock market terminologies, macroeconomic indicators, IPO, and more.</p>
+                <div class="modules">6 Modules</div>
+                <div class="views">322316 views</div>
+                <a href="#">View Details &gt;&gt;</a>
+            </div>
+
+            <!-- Stock Investing -->
+            <div class="category-card">
+                <img src="C://Users//mailt//Desktop//BLUESTOCK//frontend_adishree//stock_investing.png" alt="Stock Investing">
+                <h3>Stock Investing</h3>
+                <p>Explore stock investment basics, analysis, modeling, and strategies.</p>
+                <div class="modules">10 Modules</div>
+                <div class="views">300068 views</div>
+                <a href="#">View Details &gt;&gt;</a>
+            </div>
+
+            <!-- Technical Analysis -->
+            <div class="category-card">
+                <img src="C://Users//mailt//Desktop//BLUESTOCK//frontend_adishree//technical_analysis_1.png" alt="Technical Analysis">
+                <h3>Technical Analysis</h3>
+                <p>Explore basic to advanced topics for effective trading.</p>
+                <div class="modules">13 Modules</div>
+                <div class="views">118352 views</div>
+                <a href="#">View Details &gt;&gt;</a>
+            </div>
+
+            <!-- Derivatives -->
+            <div class="category-card">
+                <img src="C://Users//mailt//Desktop//BLUESTOCK//frontend_adishree//derivatives.png" alt="Derivatives">
+                <h3>Derivatives</h3>
+                <p>Become familiar with the principles and strategies of derivatives trading.</p>
+                <div class="modules">4 Modules</div>
+                <div class="views">325175 views</div>
+                <a href="#">View Details &gt;&gt;</a>
+            </div>
+
+            <!-- Mutual Funds -->
+            <div class="category-card">
+                <img src="C://Users//mailt//Desktop//BLUESTOCK//frontend_adishree//mutual_funds.png" alt="Mutual Funds">
+                <h3>Mutual Funds</h3>
+                <p>Learn important mutual fund concepts for effective financial planning.</p>
+                <div class="modules">2 Modules</div>
+                <div class="views">71691 views</div>
+                <a href="#">View Details &gt;&gt;</a>
+            </div>
+
+            <!-- Banking & Insurance -->
+            <div class="category-card">
+                <img src="C://Users//mailt//Desktop//BLUESTOCK//frontend_adishree//banking_insurance.png" alt="Banking & Insurance">
+                <h3>Banking & Insurance</h3>
+                <p>Learn the basics of banking and insurance for sound financial management.</p>
+                <div class="modules">8 Modules</div>
+                <div class="views">207762 views</div>
+                <a href="#">View Details &gt;&gt;</a>
+            </div>
+
+            <!-- Financial Planning -->
+            <div class="category-card">
+                <img src="C://Users//mailt//Desktop//BLUESTOCK//frontend_adishree//financial_planning.png" alt="Financial Planning">
+                <h3>Financial Planning</h3>
+                <p>Learn about thorough financial planning strategies and services.</p>
+                <div class="modules">8 Modules</div>
+                <div class="views">135856 views</div>
+                <a href="#">View Details &gt;&gt;</a>
+            </div>
+
+            <!-- Cryptocurrency -->
+            <div class="category-card">
+                <img src="C://Users//mailt//Desktop//BLUESTOCK//frontend_adishree//crypto.png" alt="Cryptocurrency">
+                <h3>Cryptocurrency</h3>
+                <p>Gain insights into the world of cryptocurrencies and blockchain.</p>
+                <div class="modules">2 Modules</div>
+                <div class="views">2729 views</div>
+                <a href="#">View Details &gt;&gt;</a>
+            </div>
+
+            <!-- Alternative Investments -->
+            <div class="category-card">
+                <img src="C://Users//mailt//Desktop//BLUESTOCK//frontend_adishree//alternative_investments.png" alt="Alternative Investments">
+                <h3>Alternative Investments</h3>
+                <p>Explore various alternative investments like gold, commodities, and real estate.</p>
+                <div class="modules">6 Modules</div>
+                <div class="views">7113 views</div>
+                <a href="#">View Details &gt;&gt;</a>
+            </div>
+
+            <!-- Book Summary -->
+            <div class="category-card">
+                <img src="C://Users//mailt//Desktop//BLUESTOCK//frontend_adishree//book.png" alt="Book Summary">
+                <h3>Book Summary</h3>
+                <p>Get summaries of popular finance books and increase your knowledge.</p>
+                <div class="modules">37 Modules</div>
+                <div class="views">740508 views</div>
+                <a href="#">View Details &gt;&gt;</a>
+            </div>
+
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
