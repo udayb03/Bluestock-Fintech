@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluestock Fintech - IPO Information</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+        }
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .logo-icon {
+            width: 30px;
+            height: 30px;
+            background-color: #3b82f6;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+        .menu-item.active {
+            background-color: #e0e7ff;
+            border-radius: 5px;
+        }
+        .menu-icon {
+            width: 20px;
+            height: 20px;
+            background-color: #a5b4fc;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .search-bar {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #e5e7eb;
+            border-radius: 5px;
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            background-color: #fde68a;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .ipo-form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .form-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .form-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .form-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary {
+            background-color: #3b82f6;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: white;
+            color: #3b82f6;
+            border: 1px solid #3b82f6;
+        }
+        .form-nav {
+            margin-bottom: 20px;
+        }
+        .form-nav-item {
+            display: inline-block;
+            margin-right: 20px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .form-nav-item.active {
+            border-bottom: 2px solid #3b82f6;
+            color: #3b82f6;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #e5e7eb;
+            border-radius: 5px;
+        }
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+        .form-col {
+            flex: 1;
+        }
+        .company-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .logo-preview {
+            width: 50px;
+            height: 50px;
+            background-color: #fde68a;
+            border-radius: 50%;
+        }
+        .logo-upload {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <span>Bluestock Fintech</span>
+            </div>
+            <div class="menu-item active">
+                <div class="menu-icon"></div>
+                <span>Dashboard</span>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon"></div>
+                <span>Manage IPO</span>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon"></div>
+                <span>IPO Subscription</span>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon"></div>
+                <span>IPO Allotment</span>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon"></div>
+                <span>Settings</span>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <input type="text" class="search-bar" placeholder="Search">
+                <div class="user-info">
+                    <div class="user-avatar"></div>
+                    <span>Hi, Vishal!</span>
+                </div>
+            </div>
+            <div class="ipo-form">
+                <div class="form-header">
+                    <h1 class="form-title">Upcoming IPO Information</h1>
+                    <div class="form-buttons">
+                        <button class="btn btn-primary">Register</button>
+                        <button class="btn btn-secondary">Cancel</button>
+                    </div>
+                </div>
+                <p>Manage your IPO Details</p>
+                <div class="form-nav">
+                    <span class="form-nav-item active">IPO Information</span>
+                    <span class="form-nav-item">IPO Info</span>
+                </div>
+                <form>
+                    <h2>IPO Information</h2>
+                    <p>Enter IPO Details</p>
+                    <div class="company-logo">
+                        <div class="logo-preview" id="logo-preview"></div>
+                        <div>
+                            <input type="file" id="logo-upload" class="logo-upload" accept="image/*" onchange="previewLogo(event)">
+                            <label for="logo-upload" class="btn btn-primary">Upload Logo</label>
+                            <button type="button" class="btn btn-secondary" onclick="deleteLogo()">Delete</button>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="company-name">Company Name</label>
+                                <input type="text" id="company-name" value="Vodafone Idea">
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="price-band">Price Band</label>
+                                <input type="text" id="price-band" value="Not Issued">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="open">Open</label>
+                                <input type="text" id="open" value="Not Issued">
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="close">Close</label>
+                                <input type="text" id="close" value="Not Issued">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="issue-size">Issue Size</label>
+                                <input type="text" id="issue-size" value="2300 Cr">
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="issue-type">Issue Type</label>
+                                <select id="issue-type">
+                                    <option>Select Issue Type</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="listing-date">Listing Date</label>
+                                <input type="text" id="listing-date" value="Nov 2024">
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="list-stock-exchange">Stock Exchange</label>
+                                <input type="text" id="list-stock-exchange" value="NSE, BSE">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function previewLogo(event) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const preview = document.getElementById('logo-preview');
+                preview.style.backgroundImage = `url(${reader.result})`;
+                preview.style.backgroundSize = 'cover';
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+
+        function deleteLogo() {
+            const preview = document.getElementById('logo-preview');
+            preview.style.backgroundImage = '';
+        }
+    </script>
+</body>
+</html>
+
