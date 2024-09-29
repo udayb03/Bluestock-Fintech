@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLUESTOCK</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+        }
+        .header {
+            background-color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .logo {
+            color: #6241EA;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+        }
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .auth-buttons button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .sign-in {
+            background-color: white;
+            color: #6241EA;
+        }
+        .sign-up {
+            background-color: #6241EA;
+            color: white;
+        }
+        .content {
+            display: flex;
+            padding: 20px;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .sidebar-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: #333;
+            text-decoration: none;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding-left: 20px;
+        }
+        .rating-cards {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .rating-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 200px;
+        }
+        .rating-card img {
+            width: 80px;
+            height: 80px;
+        }
+        .rating {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .stars {
+            color: gold;
+            font-size: 24px;
+        }
+        .open-account {
+            background-color: #4ECDC4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .chart-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .brokerage-charges {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .charge-item {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .charge-logo {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            background: linear-gradient(135deg, #4ecdc4, #45b7ac);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            border-radius: 8px;
+        }
+        .charge-logo.zerodha {
+            background: linear-gradient(135deg, #5469d4, #4054b2);
+        }
+        .charge-details {
+            flex-grow: 1;
+        }
+        .charge-value {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .charge-type {
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">BLUESTOCK</div>
+        <nav class="nav-links">
+            <a href="#">PRODUCTS</a>
+            <a href="#">COMMUNITY</a>
+            <a href="#">MEDIA</a>
+            <a href="#">BROKERS</a>
+        </nav>
+        <div class="auth-buttons">
+            <button class="sign-in">Sign In</button>
+            <button class="sign-up">Sign Up Now</button>
+        </div>
+    </header>
+    <div class="content">
+        <aside class="sidebar">
+            <a href="#" class="sidebar-item">
+                <span>🔵</span> Active Clients
+            </a>
+            <a href="#" class="sidebar-item">
+                <span>📊</span> Charges
+            </a>
+            <a href="#" class="sidebar-item">
+                <span>📝</span> Complaints
+            </a>
+            <a href="#" class="sidebar-item">
+                <span>📈</span> Share Holding
+            </a>
+            <a href="#" class="sidebar-item">
+                <span>✅</span> Pros & Cons
+            </a>
+            <a href="#" class="sidebar-item">
+                <span>⭐</span> Ratings
+            </a>
+            <a href="#" class="sidebar-item">
+                <span>💰</span> Financials
+            </a>
+        </aside>
+        <main class="main-content">
+            <div class="rating-cards">
+                <div class="rating-card">
+                    <img src="C://Users//mailt//Desktop//BLUESTOCK//frontend_adishree//angelone.png" alt="Angel One logo">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <div class="rating">4.7</div>
+                    <button class="open-account">Open Demat Account</button>
+                </div>
+                <div class="rating-card">
+                    <img src="C://Users//mailt//Desktop//BLUESTOCK//frontend_adishree//zerodha.png" alt="Zerodha logo">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <div class="rating">4.6</div>
+                    <button class="open-account">Open Demat Account</button>
+                </div>
+            </div>
+            
+            <!-- Active Clients Chart -->
+            <div class="chart-container">
+                <h2>Active Clients</h2>
+                <canvas id="activeClientsChart"></canvas>
+            </div>
+
+            <!-- Brokerage Charges Section -->
+            <div class="chart-container">
+                <h2>Brokerage Charges</h2>
+                <div class="brokerage-charges">
+                    <div class="charge-item">
+                        <div class="charge-logo">23.6</div>
+                        <div class="charge-details">
+                            <div class="charge-value">23.6</div>
+                            <div class="charge-type">Auto Square Off</div>
+                        </div>
+                    </div>
+                    <div class="charge-item">
+                        <div class="charge-logo zerodha">59</div>
+                        <div class="charge-details">
+                            <div class="charge-value">59</div>
+                            <div class="charge-type">Auto Square Off</div>
+                        </div>
+                    </div>
+                    <div class="charge-item">
+                        <div class="charge-logo">20</div>
+                        <div class="charge-details">
+                            <div class="charge-value">20</div>
+                            <div class="charge-type">Call & Trade</div>
+                        </div>
+                    </div>
+                    <div class="charge-item">
+                        <div class="charge-logo zerodha">50</div>
+                        <div class="charge-details">
+                            <div class="charge-value">50</div>
+                            <div class="charge-type">Call & Trade</div>
+                        </div>
+                    </div>
+                    <div class="charge-item">
+                        <div class="charge-logo">15.34</div>
+                        <div class="charge-details">
+                            <div class="charge-value">15.34</div>
+                            <div class="charge-type">DP Charges</div>
+                        </div>
+                    </div>
+                    <div class="charge-item">
+                        <div class="charge-logo zerodha">15.93</div>
+                        <div class="charge-details">
+                            <div class="charge-value">15.93</div>
+                            <div class="charge-type">DP Charges</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Complaints Chart -->
+            <div class="chart-container">
+                <h2>Complaints</h2>
+                <canvas id="complaintsChart"></canvas>
+            </div>
+        </main>
+    </div>
+
+    <!-- Chart Scripts -->
+    <script>
+        const activeClientsCtx = document.getElementById('activeClientsChart').getContext('2d');
+        const complaintsCtx = document.getElementById('complaintsChart').getContext('2d');
+
+        new Chart(activeClientsCtx, {
+            type: 'line', // Changed to line chart
+            data: {
+                labels: ['Angel One', 'Zerodha', 'Groww', '5Paisa', 'Upstox'],
+                datasets: [{
+                    label: 'Active Clients (in Lakhs)',
+                    data: [76.32, 63.12, 46.98, 32.75, 29.44],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 2,
+                    fill: false // Disable fill
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        new Chart(complaintsCtx, {
+            type: 'line', // Changed to line chart
+            data: {
+                labels: ['Angel One', 'Zerodha', 'Groww', '5Paisa', 'Upstox'],
+                datasets: [{
+                    label: 'Complaints (in Numbers)',
+                    data: [630, 590, 330, 250, 240],
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 2,
+                    fill: false // Disable fill
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
