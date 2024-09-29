@@ -3,320 +3,301 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upcoming IPO</title>
+    <title>Bluestock - Upcoming IPO</title>
     <style>
-        /* General styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
         }
-
         header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        h1 {
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        .breadcrumb {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .ipo-card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .ipo-card {
             background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .ipo-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .ipo-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .ipo-header img {
-            width: 40px;
-            height: 40px;
-            object-fit: contain;
-            margin-right: 10px;
-        }
-
-        .ipo-header h3 {
-            font-size: 18px;
-            color: #333;
-        }
-
-        .ipo-details {
-            margin-bottom: 15px;
-        }
-
-        .ipo-details p {
-            font-size: 14px;
-            color: #555;
-            margin-bottom: 5px;
-        }
-
-        .ipo-details strong {
-            color: #333;
-        }
-
-        .action-buttons {
+            padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-
-        .action-buttons button {
+        .logo {
+            width: 150px;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        .user-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ddd;
+        }
+        .sign-up {
+            background-color: #4B0082;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .ipo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .ipo-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .ipo-logo {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+            object-fit: contain;
+        }
+        .ipo-name {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .ipo-details {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .ipo-price {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .subscribe-btn {
+            background-color: #FF6600;
+            color: white;
             border: none;
-            padding: 8px 12px;
+            padding: 8px 16px;
             border-radius: 5px;
             cursor: pointer;
-            color: white;
-            font-size: 14px;
         }
-
-        .blue-btn {
-            background-color: #4FC3F7;
+        .faq-section {
+            margin-top: 40px;
         }
-
-        .orange-btn {
-            background-color: #FF6F00;
+        .faq-item {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 10px;
         }
-
-        .blue-btn:hover {
-            background-color: #0288D1;
+        .faq-question {
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
         }
-
-        .orange-btn:hover {
-            background-color: #E65100;
+        .faq-answer {
+            margin-top: 10px;
+            display: none;
         }
-
+        .faq-answer.active {
+            display: block;
+        }
     </style>
 </head>
 <body>
-
-    <!-- Header -->
     <header>
-        <h1>Bluestock - Upcoming IPOs</h1>
+        <img src="C://Users//mailt//Desktop//BLUESTOCK//frontend_adishree//Copy of SITE1.png" alt="Bluestock Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#">DASHBOARD</a></li>
+                <li><a href="#">IPO</a></li>
+                <li><a href="#">LEARN</a></li>
+                <li><a href="#">SUPPORT</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <div class="user-avatar"></div>
+            <a href="#" class="sign-up">Sign up</a>
+        </div>
     </header>
-
-    <!-- Main content -->
-    <div class="container">
-        <!-- Breadcrumb -->
-        <div class="breadcrumb">
-            Bluestock &gt; IPO &gt; Upcoming IPOs
+    <main>
+        <h1>Upcoming IPO</h1>
+        <div class="ipo-grid">
+            <div class="ipo-card">
+                <img src="C://Users//mailt//Desktop//BLUESTOCK//frontend_adishree//nova.png" alt="Nova Agrotech Logo" class="ipo-logo">
+                <div class="ipo-name">Nova Agrotech Ltd.</div>
+                <div class="ipo-details">
+                    <div>Issue Size: 2000-2100 Cr</div>
+                    <div>Fresh Issue: ₹1600 Cr</div>
+                    <div>Offer for Sale: 10,437,340 Shares</div>
+                </div>
+                <div class="ipo-price">Price: ₹ 10,437,340</div>
+                <button class="subscribe-btn">Subscribe</button>
+            </div>
+            
+            <div class="ipo-card">
+                <img src="C://Users//mailt//Desktop//BLUESTOCK//frontend_adishree//epack.png" alt="EPACK Durable Ltd. logo" class="ipo-logo">
+                <div class="ipo-name">EPACK Durable Ltd.</div>
+                <div class="ipo-details">
+                    <div>Issue Size: 600-650 Cr</div>
+                    <div>Fresh Issue: ₹300 Cr</div>
+                    <div>Offer for Sale: 10,437,340 Shares</div>
+                </div>
+                <div class="ipo-price">Price: ₹ 10,437,340</div>
+                <button class="subscribe-btn">Subscribe</button>
+            </div>
+            
+            <div class="ipo-card">
+                <img src="C://Users//mailt//Desktop//BLUESTOCK//frontend_adishree//cloudnine.png" alt="Cloud Nine Logo" class="ipo-logo">
+                <div class="ipo-name">Kids Clinic India Ltd</div>
+                <div class="ipo-details">
+                    <div>Issue Size: 1200-1300 Cr</div>
+                    <div>Fresh Issue: ₹900 Cr</div>
+                    <div>Offer for Sale: 10,437,340 Shares</div>
+                </div>
+                <div class="ipo-price">Price: ₹ 10,437,340</div>
+                <button class="subscribe-btn">Subscribe</button>
+            </div>
+            
+            <div class="ipo-card">
+                <img src="C://Users//mailt//Desktop//BLUESTOCK//frontend_adishree//oyo.png" alt="OYO Logo" class="ipo-logo">
+                <div class="ipo-name">Oravel Stays Ltd.</div>
+                <div class="ipo-details">
+                    <div>Issue Size: 2000-2100 Cr</div>
+                    <div>Fresh Issue: ₹1600 Cr</div>
+                    <div>Offer for Sale: 10,437,340 Shares</div>
+                </div>
+                <div class="ipo-price">Price: ₹ 10,437,340</div>
+                <button class="subscribe-btn">Subscribe</button>
+            </div>
+            
+            <div class="ipo-card">
+                <img src="C://Users//mailt//Desktop//BLUESTOCK//frontend_adishree//boat.png" alt="boAt Logo" class="ipo-logo">
+                <div class="ipo-name">Imagine Marketing Ltd.</div>
+                <div class="ipo-details">
+                    <div>Issue Size: 2000-2100 Cr</div>
+                    <div>Fresh Issue: ₹1600 Cr</div>
+                    <div>Offer for Sale: 10,437,340 Shares</div>
+                </div>
+                <div class="ipo-price">Price: ₹ 10,437,340</div>
+                <button class="subscribe-btn">Subscribe</button>
+            </div>
+            
+            <div class="ipo-card">
+                <img src="C://Users//mailt//Desktop//BLUESTOCK//frontend_adishree//mobikwik.png" alt="Apis India Logo" class="ipo-logo">
+                <div class="ipo-name">One Mobikwik Systems Ltd.</div>
+                <div class="ipo-details">
+                    <div>Issue Size: 2000-2100 Cr</div>
+                    <div>Fresh Issue: ₹1600 Cr</div>
+                    <div>Offer for Sale: 10,437,340 Shares</div>
+                </div>
+                <div class="ipo-price">Price: ₹ 10,437,340</div>
+                <button class="subscribe-btn">Subscribe</button>
+            </div>
+            
+            <div class="ipo-card">
+                <img src="C://Users//mailt//Desktop//BLUESTOCK//frontend_adishree//ola.png" alt="OLA Electric Logo" class="ipo-logo">
+                <div class="ipo-name">OLA Electric Mobility Ltd.</div>
+                <div class="ipo-details">
+                    <div>Issue Size: 2000-2100 Cr</div>
+                    <div>Fresh Issue: ₹1600 Cr</div>
+                    <div>Offer for Sale: 10,437,340 Shares</div>
+                </div>
+                <div class="ipo-price">Price: ₹ 10,437,340</div>
+                <button class="subscribe-btn">Subscribe</button>
+            </div>
+            
+            <div class="ipo-card">
+                <img src="C://Users//mailt//Desktop//BLUESTOCK//frontend_adishree//ixigo.png" alt="TGSC Logo" class="ipo-logo">
+                <div class="ipo-name">Le Travenues Technology Ltd.</div>
+                <div class="ipo-details">
+                    <div>Issue Size: 2000-2100 Cr</div>
+                    <div>Fresh Issue: ₹1600 Cr</div>
+                    <div>Offer for Sale: 10,437,340 Shares</div>
+                </div>
+                <div class="ipo-price">Price: ₹ 10,437,340</div>
+                <button class="subscribe-btn">Subscribe</button>
+            </div>
+            
+            <div class="ipo-card">
+                <img src="C://Users//mailt//Desktop//BLUESTOCK//frontend_adishree//CMR.png" alt="CMS Logo" class="ipo-logo">
+                <div class="ipo-name">CMR Green Technvologies Ltd.</div>
+                <div class="ipo-details">
+                    <div>Issue Size: 2000-2100 Cr</div>
+                    <div>Fresh Issue: ₹1600 Cr</div>
+                    <div>Offer for Sale: 10,437,340 Shares</div>
+                </div>
+                <div class="ipo-price">Price: ₹ 10,437,340</div>
+                <button class="subscribe-btn">Subscribe</button>
+            </div>
+            
+            <div class="ipo-card">
+                <img src="C://Users//mailt//Desktop//BLUESTOCK//frontend_adishree//WELLNESS.png" alt="Wellness Forever Logo" class="ipo-logo">
+                <div class="ipo-name">Wellness Forever Ltd.</div>
+                <div class="ipo-details">
+                    <div>Issue Size: 2000-2100 Cr</div>
+                    <div>Fresh Issue: ₹1600 Cr</div>
+                    <div>Offer for Sale: 10,437,340 Shares</div>
+                </div>
+                <div class="ipo-price">Price: ₹ 10,437,340</div>
+                <button class="subscribe-btn">Subscribe</button>
+            </div>
+            
         </div>
-
-        <!-- IPO Cards Grid -->
-        <div class="ipo-card-grid">
-            <!-- IPO Card 1 -->
-            <div class="ipo-card">
-                <div class="ipo-header">
-                    <img src="https://via.placeholder.com/40" alt="Company Logo">
-                    <h3>Nova Agritech Ltd.</h3>
+        <div class="faq-section">
+            <h2>Frequently Asked Questions?</h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    How to Subscribe to an IPO?
+                    <span>+</span>
                 </div>
-                <div class="ipo-details">
-                    <p><strong>Price Band:</strong> Rs 39 - 41</p>
-                    <p><strong>Open:</strong> 2024-01-22</p>
-                    <p><strong>Close:</strong> 2024-01-24</p>
-                    <p><strong>Issue Size:</strong> 143.81 Cr.</p>
-                    <p><strong>Issue Type:</strong> Book Built</p>
-                    <p><strong>Listing Date:</strong> 2024-01-30</p>
-                </div>
-                <div class="action-buttons">
-                    <button class="blue-btn">RHP</button>
-                    <button class="orange-btn">DRHP</button>
+                <div class="faq-answer">
+                    <ul>
+                        <li>Step 1: Login to your trading account with your service provider.</li>
+                        <li>Step 2: Click on the IPO button.</li>
+                        <li>Step 3: Select the IPO you want to bid and enter the relevant details.</li>
+                        <li>Step 4: Enter the quantity and price you want to bid at, and submit your application.</li>
+                    </ul>
                 </div>
             </div>
-
-            <!-- IPO Card 2 -->
-            <div class="ipo-card">
-                <div class="ipo-header">
-                    <img src="https://via.placeholder.com/40" alt="Company Logo">
-                    <h3>EPACK Durable Ltd.</h3>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Should I buy an IPO first day?
+                    <span>+</span>
                 </div>
-                <div class="ipo-details">
-                    <p><strong>Price Band:</strong> Rs 218 - 230</p>
-                    <p><strong>Open:</strong> 2024-01-19</p>
-                    <p><strong>Close:</strong> 2024-01-23</p>
-                    <p><strong>Issue Size:</strong> 640.05 Cr.</p>
-                    <p><strong>Issue Type:</strong> Book Built</p>
-                    <p><strong>Listing Date:</strong> 2024-01-29</p>
-                </div>
-                <div class="action-buttons">
-                    <button class="blue-btn">RHP</button>
-                    <button class="orange-btn">DRHP</button>
+                <div class="faq-answer">
+                    <!-- Add answer content here -->
                 </div>
             </div>
-
-            <!-- IPO Card 3 -->
-            <div class="ipo-card">
-                <div class="ipo-header">
-                    <img src="https://via.placeholder.com/40" alt="Company Logo">
-                    <h3>RK Swamy Ltd.</h3>
-                </div>
-                <div class="ipo-details">
-                    <p><strong>Price Band:</strong> Not Issued</p>
-                    <p><strong>Open:</strong> Not Issued</p>
-                    <p><strong>Close:</strong> Not Issued</p>
-                    <p><strong>Issue Size:</strong> 640.05 Cr.</p>
-                    <p><strong>Issue Type:</strong> Book Built</p>
-                    <p><strong>Listing Date:</strong> 2024-01-29</p>
-                </div>
-                <div class="action-buttons">
-                    <button class="blue-btn">RHP</button>
-                    <button class="orange-btn">DRHP</button>
-                </div>
-            </div>
-
-            <!-- IPO Card 4 -->
-            <div class="ipo-card">
-                <div class="ipo-header">
-                    <img src="https://via.placeholder.com/40" alt="Company Logo">
-                    <h3>Oravel Stays Ltd. (OYO)</h3>
-                </div>
-                <div class="ipo-details">
-                    <p><strong>Price Band:</strong> Not Issued</p>
-                    <p><strong>Open:</strong> Not Issued</p>
-                    <p><strong>Close:</strong> Not Issued</p>
-                    <p><strong>Issue Size:</strong> 8430 Cr.</p>
-                    <p><strong>Issue Type:</strong> Book Built</p>
-                </div>
-                <div class="action-buttons">
-                    <button class="blue-btn">RHP</button>
-                    <button class="orange-btn">DRHP</button>
-                </div>
-            </div>
-
-            <!-- IPO Card 5 -->
-            <div class="ipo-card">
-                <div class="ipo-header">
-                    <img src="https://via.placeholder.com/40" alt="Company Logo">
-                    <h3>Imagine Marketing Ltd. (boAt)</h3>
-                </div>
-                <div class="ipo-details">
-                    <p><strong>Price Band:</strong> Not Issued</p>
-                    <p><strong>Open:</strong> Not Issued</p>
-                    <p><strong>Close:</strong> Not Issued</p>
-                    <p><strong>Issue Size:</strong> 2000 Cr.</p>
-                    <p><strong>Issue Type:</strong> Book Built</p>
-                </div>
-                <div class="action-buttons">
-                    <button class="blue-btn">RHP</button>
-                    <button class="orange-btn">DRHP</button>
-                </div>
-            </div>
-
-            <!-- IPO Card 6 -->
-            <div class="ipo-card">
-                <div class="ipo-header">
-                    <img src="https://via.placeholder.com/40" alt="Company Logo">
-                    <h3>Kids Clinic India Ltd.</h3>
-                </div>
-                <div class="ipo-details">
-                    <p><strong>Price Band:</strong> Not Issued</p>
-                    <p><strong>Open:</strong> Not Issued</p>
-                    <p><strong>Close:</strong> Not Issued</p>
-                    <p><strong>Issue Size:</strong> 840 Cr.</p>
-                    <p><strong>Issue Type:</strong> Book Built</p>
-                </div>
-                <div class="action-buttons">
-                    <button class="blue-btn">RHP</button>
-                    <button class="orange-btn">DRHP</button>
-                </div>
-            </div>
-
-            <!-- IPO Card 7 -->
-            <div class="ipo-card">
-                <div class="ipo-header">
-                    <img src="https://via.placeholder.com/40" alt="Company Logo">
-                    <h3>Yatra Online Ltd.</h3>
-                </div>
-                <div class="ipo-details">
-                    <p><strong>Price Band:</strong> Not Issued</p>
-                    <p><strong>Open:</strong> Not Issued</p>
-                    <p><strong>Close:</strong> Not Issued</p>
-                    <p><strong>Issue Size:</strong> 750 Cr.</p>
-                    <p><strong>Issue Type:</strong> Book Built</p>
-                </div>
-                <div class="action-buttons">
-                    <button class="blue-btn">RHP</button>
-                    <button class="orange-btn">DRHP</button>
-                </div>
-            </div>
-
-            <!-- IPO Card 8 -->
-            <div class="ipo-card">
-                <div class="ipo-header">
-                    <img src="https://via.placeholder.com/40" alt="Company Logo">
-                    <h3>Annai Infra Developers Ltd.</h3>
-                </div>
-                <div class="ipo-details">
-                    <p><strong>Price Band:</strong> Not Issued</p>
-                    <p><strong>Open:</strong> Not Issued</p>
-                    <p><strong>Close:</strong> Not Issued</p>
-                    <p><strong>Issue Size:</strong> 2000 Cr.</p>
-                    <p><strong>Issue Type:</strong> Book Built</p>
-                </div>
-                <div class="action-buttons">
-                    <button class="blue-btn">RHP</button>
-                    <button class="orange-btn">DRHP</button>
-                </div>
-            </div>
-
-            <!-- IPO Card 9 -->
-            <div class="ipo-card">
-                <div class="ipo-header">
-                    <img src="https://via.placeholder.com/40" alt="Company Logo">
-                    <h3>Chaman Metallics Ltd.</h3>
-                </div>
-                <div class="ipo-details">
-                    <p><strong>Price Band:</strong> Rs 38</p>
-                    <p><strong>Open:</strong> 2024-01-04</p>
-                    <p><strong>Close:</strong> 2024-01-06</p>
-                    <p><strong>Issue Size:</strong> 24 Cr.</p>
-                    <p><strong>Issue Type:</strong> Book Built</p>
-                </div>
-                <div class="action-buttons">
-                    <button class="blue-btn">RHP</button>
-                    <button class="orange-btn">DRHP</button>
-                </div>
-            </div>
-
+            <!-- Add more FAQ items as needed -->
         </div>
-    </div>
-
+    </main>
+    <script>
+        // Simple script to toggle FAQ answers
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('active');
+                question.querySelector('span').textContent = answer.classList.contains('active') ? '-' : '+';
+            });
+        });
+    </script>
 </body>
 </html>
-
