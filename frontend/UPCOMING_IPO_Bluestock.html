@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming IPO</title>
+    <style>
+        /* General styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .breadcrumb {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .ipo-card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .ipo-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .ipo-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .ipo-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .ipo-header img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            margin-right: 10px;
+        }
+
+        .ipo-header h3 {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .ipo-details {
+            margin-bottom: 15px;
+        }
+
+        .ipo-details p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .ipo-details strong {
+            color: #333;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .action-buttons button {
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            font-size: 14px;
+        }
+
+        .blue-btn {
+            background-color: #4FC3F7;
+        }
+
+        .orange-btn {
+            background-color: #FF6F00;
+        }
+
+        .blue-btn:hover {
+            background-color: #0288D1;
+        }
+
+        .orange-btn:hover {
+            background-color: #E65100;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Bluestock - Upcoming IPOs</h1>
+    </header>
+
+    <!-- Main content -->
+    <div class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            Bluestock &gt; IPO &gt; Upcoming IPOs
+        </div>
+
+        <!-- IPO Cards Grid -->
+        <div class="ipo-card-grid">
+            <!-- IPO Card 1 -->
+            <div class="ipo-card">
+                <div class="ipo-header">
+                    <img src="https://via.placeholder.com/40" alt="Company Logo">
+                    <h3>Nova Agritech Ltd.</h3>
+                </div>
+                <div class="ipo-details">
+                    <p><strong>Price Band:</strong> Rs 39 - 41</p>
+                    <p><strong>Open:</strong> 2024-01-22</p>
+                    <p><strong>Close:</strong> 2024-01-24</p>
+                    <p><strong>Issue Size:</strong> 143.81 Cr.</p>
+                    <p><strong>Issue Type:</strong> Book Built</p>
+                    <p><strong>Listing Date:</strong> 2024-01-30</p>
+                </div>
+                <div class="action-buttons">
+                    <button class="blue-btn">RHP</button>
+                    <button class="orange-btn">DRHP</button>
+                </div>
+            </div>
+
+            <!-- IPO Card 2 -->
+            <div class="ipo-card">
+                <div class="ipo-header">
+                    <img src="https://via.placeholder.com/40" alt="Company Logo">
+                    <h3>EPACK Durable Ltd.</h3>
+                </div>
+                <div class="ipo-details">
+                    <p><strong>Price Band:</strong> Rs 218 - 230</p>
+                    <p><strong>Open:</strong> 2024-01-19</p>
+                    <p><strong>Close:</strong> 2024-01-23</p>
+                    <p><strong>Issue Size:</strong> 640.05 Cr.</p>
+                    <p><strong>Issue Type:</strong> Book Built</p>
+                    <p><strong>Listing Date:</strong> 2024-01-29</p>
+                </div>
+                <div class="action-buttons">
+                    <button class="blue-btn">RHP</button>
+                    <button class="orange-btn">DRHP</button>
+                </div>
+            </div>
+
+            <!-- IPO Card 3 -->
+            <div class="ipo-card">
+                <div class="ipo-header">
+                    <img src="https://via.placeholder.com/40" alt="Company Logo">
+                    <h3>RK Swamy Ltd.</h3>
+                </div>
+                <div class="ipo-details">
+                    <p><strong>Price Band:</strong> Not Issued</p>
+                    <p><strong>Open:</strong> Not Issued</p>
+                    <p><strong>Close:</strong> Not Issued</p>
+                    <p><strong>Issue Size:</strong> 640.05 Cr.</p>
+                    <p><strong>Issue Type:</strong> Book Built</p>
+                    <p><strong>Listing Date:</strong> 2024-01-29</p>
+                </div>
+                <div class="action-buttons">
+                    <button class="blue-btn">RHP</button>
+                    <button class="orange-btn">DRHP</button>
+                </div>
+            </div>
+
+            <!-- IPO Card 4 -->
+            <div class="ipo-card">
+                <div class="ipo-header">
+                    <img src="https://via.placeholder.com/40" alt="Company Logo">
+                    <h3>Oravel Stays Ltd. (OYO)</h3>
+                </div>
+                <div class="ipo-details">
+                    <p><strong>Price Band:</strong> Not Issued</p>
+                    <p><strong>Open:</strong> Not Issued</p>
+                    <p><strong>Close:</strong> Not Issued</p>
+                    <p><strong>Issue Size:</strong> 8430 Cr.</p>
+                    <p><strong>Issue Type:</strong> Book Built</p>
+                </div>
+                <div class="action-buttons">
+                    <button class="blue-btn">RHP</button>
+                    <button class="orange-btn">DRHP</button>
+                </div>
+            </div>
+
+            <!-- IPO Card 5 -->
+            <div class="ipo-card">
+                <div class="ipo-header">
+                    <img src="https://via.placeholder.com/40" alt="Company Logo">
+                    <h3>Imagine Marketing Ltd. (boAt)</h3>
+                </div>
+                <div class="ipo-details">
+                    <p><strong>Price Band:</strong> Not Issued</p>
+                    <p><strong>Open:</strong> Not Issued</p>
+                    <p><strong>Close:</strong> Not Issued</p>
+                    <p><strong>Issue Size:</strong> 2000 Cr.</p>
+                    <p><strong>Issue Type:</strong> Book Built</p>
+                </div>
+                <div class="action-buttons">
+                    <button class="blue-btn">RHP</button>
+                    <button class="orange-btn">DRHP</button>
+                </div>
+            </div>
+
+            <!-- IPO Card 6 -->
+            <div class="ipo-card">
+                <div class="ipo-header">
+                    <img src="https://via.placeholder.com/40" alt="Company Logo">
+                    <h3>Kids Clinic India Ltd.</h3>
+                </div>
+                <div class="ipo-details">
+                    <p><strong>Price Band:</strong> Not Issued</p>
+                    <p><strong>Open:</strong> Not Issued</p>
+                    <p><strong>Close:</strong> Not Issued</p>
+                    <p><strong>Issue Size:</strong> 840 Cr.</p>
+                    <p><strong>Issue Type:</strong> Book Built</p>
+                </div>
+                <div class="action-buttons">
+                    <button class="blue-btn">RHP</button>
+                    <button class="orange-btn">DRHP</button>
+                </div>
+            </div>
+
+            <!-- IPO Card 7 -->
+            <div class="ipo-card">
+                <div class="ipo-header">
+                    <img src="https://via.placeholder.com/40" alt="Company Logo">
+                    <h3>Yatra Online Ltd.</h3>
+                </div>
+                <div class="ipo-details">
+                    <p><strong>Price Band:</strong> Not Issued</p>
+                    <p><strong>Open:</strong> Not Issued</p>
+                    <p><strong>Close:</strong> Not Issued</p>
+                    <p><strong>Issue Size:</strong> 750 Cr.</p>
+                    <p><strong>Issue Type:</strong> Book Built</p>
+                </div>
+                <div class="action-buttons">
+                    <button class="blue-btn">RHP</button>
+                    <button class="orange-btn">DRHP</button>
+                </div>
+            </div>
+
+            <!-- IPO Card 8 -->
+            <div class="ipo-card">
+                <div class="ipo-header">
+                    <img src="https://via.placeholder.com/40" alt="Company Logo">
+                    <h3>Annai Infra Developers Ltd.</h3>
+                </div>
+                <div class="ipo-details">
+                    <p><strong>Price Band:</strong> Not Issued</p>
+                    <p><strong>Open:</strong> Not Issued</p>
+                    <p><strong>Close:</strong> Not Issued</p>
+                    <p><strong>Issue Size:</strong> 2000 Cr.</p>
+                    <p><strong>Issue Type:</strong> Book Built</p>
+                </div>
+                <div class="action-buttons">
+                    <button class="blue-btn">RHP</button>
+                    <button class="orange-btn">DRHP</button>
+                </div>
+            </div>
+
+            <!-- IPO Card 9 -->
+            <div class="ipo-card">
+                <div class="ipo-header">
+                    <img src="https://via.placeholder.com/40" alt="Company Logo">
+                    <h3>Chaman Metallics Ltd.</h3>
+                </div>
+                <div class="ipo-details">
+                    <p><strong>Price Band:</strong> Rs 38</p>
+                    <p><strong>Open:</strong> 2024-01-04</p>
+                    <p><strong>Close:</strong> 2024-01-06</p>
+                    <p><strong>Issue Size:</strong> 24 Cr.</p>
+                    <p><strong>Issue Type:</strong> Book Built</p>
+                </div>
+                <div class="action-buttons">
+                    <button class="blue-btn">RHP</button>
+                    <button class="orange-btn">DRHP</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
