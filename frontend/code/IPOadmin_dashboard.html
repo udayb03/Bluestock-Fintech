@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluestock Fintech Dashboard</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+        }
+        .container {
+            display: flex;
+            height: 100%;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #f0f2f5;
+            padding: 20px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .logo-icon {
+            width: 30px;
+            height: 30px;
+            background-color: #3b82f6;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+        .menu-item.active {
+            background-color: #e0e7ff;
+            border-radius: 5px;
+        }
+        .menu-icon {
+            width: 20px;
+            height: 20px;
+            background-color: #a5b4fc;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .search-bar {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #e5e7eb;
+            border-radius: 5px;
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            background-color: #fde68a;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .dashboard-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        .dashboard-card {
+            background-color: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .chart-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+        .chart-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: conic-gradient(
+                #a5b4fc 0deg 108deg,
+                #60a5fa 108deg 180deg,
+                #fbbf24 180deg 360deg
+            );
+            position: relative;
+        }
+        .chart-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .quick-links {
+            list-style-type: none;
+            padding: 0;
+        }
+        .quick-links li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .quick-links .icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+        .donut-chart {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: conic-gradient(
+                #4f46e5 0deg 270deg,
+                #e0e7ff 270deg 360deg
+            );
+            position: relative;
+        }
+        .donut-hole {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border-radius: 50%;
+        }
+        .legend {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+        }
+        .legend-color {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <span>Bluestock Fintech</span>
+            </div>
+            <div class="menu">
+                <div class="menu-item active">
+                    <div class="menu-icon"></div>
+                    <span>Dashboard</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon"></div>
+                    <span>Manage IPO</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon"></div>
+                    <span>IPO Subscription</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon"></div>
+                    <span>IPO Allotment</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon"></div>
+                    <span>Settings</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon"></div>
+                    <span>API Manager</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon"></div>
+                    <span>Accounts</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon"></div>
+                    <span>Help</span>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <input type="text" class="search-bar" placeholder="Search">
+                <div class="user-info">
+                    <div class="user-avatar"></div>
+                    <span>Hi, Vishal!</span>
+                </div>
+            </div>
+            <h1>Dashboard</h1>
+            <div class="dashboard-content">
+                <div class="dashboard-card">
+                    <h2>IPO Dashboard India</h2>
+                    <p style="color: green;">↑ 20 IPO in Gain</p>
+                    <div class="chart-container">
+                        <div class="chart-circle">
+                            <div class="chart-center">30</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <h2>Quick Links</h2>
+                    <p>Adipiscing elit, sed do eiusmod tempor</p>
+                    <ul class="quick-links">
+                        <li><div class="icon" style="background-color: #ef4444;"></div>NSE India <a href="#">Visit Now</a></li>
+                        <li><div class="icon" style="background-color: #3b82f6;"></div>BSE India <a href="#">Visit Now</a></li>
+                        <li><div class="icon" style="background-color: #10b981;"></div>SEBI <a href="#">Visit Now</a></li>
+                        <li><div class="icon" style="background-color: #6366f1;"></div>Money Control <a href="#">Visit Now</a></li>
+                    </ul>
+                </div>
+                <div class="dashboard-card">
+                    <h2>Main Board IPO</h2>
+                    <p>From 01 Jan 2024</p>
+                    <a href="#" style="float: right;">View Report</a>
+                    <div class="chart-container">
+                        <div class="donut-chart">
+                            <div class="donut-hole"></div>
+                        </div>
+                    </div>
+                    <div class="legend">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #4f46e5;"></div>
+                            <span>Upcomming</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #818cf8;"></div>
+                            <span>New Listed</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #e0e7ff;"></div>
+                            <span>Ongoing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
